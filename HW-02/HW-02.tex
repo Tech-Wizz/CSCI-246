@@ -1,0 +1,253 @@
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\date{September 14, 2020}
+
+\title{CSCI 246: Assignment~2~(6 points)}
+
+\author{Kruize Christensen}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Monday, Sep 14, 8:30pm}. It is strongly
+encouraged that you use Latex to generate a single pdf file and upload it
+under {\em Assignment 2} on D2L. But there will NOT be a penalty for not
+using Latex (to finish the assignment). This could be a group-assignment,
+so you could form a group with $\leq 3$ students (mathematically, this means
+you can also do it by yourself).
+\newline
+ 
+\section*{Problem 1.}
+
+\noindent
+Find exact values for each of the following quantities without using a calculator. 
+\newline
+
+\noindent
+(1.1) $\log_2(512)=$
+\newline
+\newline
+$512/2=256/2=128/2=64/2=32/2=16/2=8/2=4/2=2$
+\newline
+$log_2(2^9)=9$
+\newline
+\noindent
+{\bf Answer:}~~ 9
+\newline
+
+\noindent
+(1.2) $\log_2(4096)=$
+\newline
+\newline
+$4096/2=2048/2=1024/2=512/2=256/2=128/2=64/2=32/2=16/2=8/2=4/2=2$
+\newline
+$log_2(2^{12}))=12$
+\newline
+\noindent
+{\bf Answer:}~~ 12
+\newline
+
+\noindent
+(1.3) $\log_2(8192)=$
+\newline
+\newline
+$8192/2=4096/2=2048/2=1024/2=512/2=256/2=128/2=64/2=32/2=16/2=8/2=4/2=2$
+\newline
+$log_2(2^{13})=13$
+\newline
+\noindent
+{\bf Answer:}~~ 13
+
+
+\noindent
+(1.4) $\log_2(1024\cdot 4096)=$?  And $\log_2(1024)+\log_2(4096)=$?
+\newline
+\newline
+$\log_2(2^{10}\cdot 2^{12})=22$
+\newline
+$10+12=22$
+\newline
+\noindent
+{\bf Answer:}~~ 22 and 22
+\newline
+
+\noindent
+(1.5) $\log_2(\frac{4096}{64})=$? And $\log_2(4096)-\log_2(64)=$?
+\newline
+\newline
+$\frac{4096}{64}=64//\log_2(2^6)=6$
+\newline
+$(\log_2(4096)=12)-(\log_2(64)=6)=6$
+\newline
+\noindent
+{\bf Answer:}~~ 6 and 6
+
+
+\newpage
+
+
+\section*{Problem 2.}
+
+\noindent
+Let $A=\{4,5,7\}$ and $B=\{y,z\}$. Let $p_1$ and $p_2$ be the {\em projections} of $A\times B$ onto the first and second coordinates (components). That is,
+for each pair $(a,b)\in A\times B$, $p_1(a,b)=a$ and $p_2(a,b)=b$. 
+\newline
+
+Answer the following questions:
+\newline
+
+\noindent
+(2.1) Find $p_1(5,y)$ and $p_1(4,z)$.
+\newline
+\newline
+\noindent
+{\bf Answer:}~~ 5 and 4
+\newline
+
+\noindent
+(2.2) What is the range of $p_1$?
+\newline
+\newline
+%\noindent
+{\bf Answer:}~~ \{5,4\}
+\newline
+
+\noindent
+(2.3) Find $p_2(5,y)$ and $p_2(4,z)$.
+\newline
+\newline
+%
+%\noindent
+{\bf Answer:}~~ y and z
+\newline
+
+\noindent
+(2.4) What is the range of $p_2$?
+\newline
+\newline
+%
+%\noindent
+{\bf Answer:}~~\{y,z\} 
+\newpage
+
+\noindent
+\section*{Problem 3.}
+
+Write the negation, contrapositive, converse, and inverse for the following statement.
+\newline
+
+If $x$ is at most 25, then $x$ is smaller than 25 or $x$ is equal to 25.
+\newline
+$x \leq 25$, then $x<25$ or $x=25$
+\newline
+
+\noindent
+(3.1) Negation
+\newline
+\newline
+%
+%\noindent
+{\bf Answer:}~~ $x \leq 25$, $x \nless 25$ and $ x \neq 25$
+\newline
+\newline
+
+\noindent
+(3.2) Contrapositive
+\newline
+\newline
+{\bf Answer:}~~ if $x \nless 25$ and $x \neq 25$ , then $x \nleq 25$
+\newline
+\newline
+
+\noindent
+(3.3) Converse
+\newline
+\newline
+{\bf Answer:}~~If $x<25$ or $x=25$, then $x \leq 25$
+\newline
+\newline
+
+\noindent
+(3.4) Inverse
+\newline
+\newline
+{\bf Answer:}~~If $x \nleq 25$, then $x \nless 25$ or $x \neq 25$
+\newline
+\newline
+\newpage
+
+\section*{Problem 4.}
+
+Peter worked hard last night; in fact, he slept for only two hours. He claimed that he found the following theorem:
+
+$\forall x\in\mathbb{Z}, \frac{x-1}{x}$ is not an integer.
+\newline
+
+\noindent
+(4.1) Find a counterexample for Peter's claim.
+\newline
+\newline
+{\bf Answer:}~~ When $x=1$, $\frac{1-1}{1}=\frac{0}{1}=0$ and zero is an integer and when $x=-1$,$\frac{(-1)-1}{-1}=\frac{-2}{-1}=2$ and two is also an integer
+\newline
+\newline
+
+\noindent
+(4.2) Can you add a hypothesis to have a conditional statement so that Peter's conclusion is true?
+\newline
+\newline
+{\bf Answer:}~~$\forall x\in\mathbb{Z},x\neq \{-1,1\} , \frac{x-1}{x}$
+\newline
+This now makes the statement true because it excludes the two numbers making the original stamen false
+\newline
+\newline
+\newpage
+
+\section*{Problem 5.}
+
+Let $X$ be the set of all students at MSU, and let $M(s)$ be ``$s$ is a math major," $C(s)$ be ``$s$ is a computer science major," and let $P(s)$ be ``$s$ is a physics major." Express the following statements using quantifiers, variables, and the predicates $M(s)$, $C(s)$, and $E(s)$.
+\newline
+
+\noindent
+(5.1) Some computer science students are not physics majors.
+\newline
+\newline
+
+%\noindent
+{\bf Answer:}~~ $\exists C(s)\land P(s)$
+\newline
+\newline
+
+\noindent
+(5.2) No mathematics students are also physics majors.
+\newline
+\newline
+
+%\noindent
+{\bf Answer:}~~ $\nexists M(s) \land P(s)$
+\newline
+\newline
+
+\noindent
+(5.3) There is a computer science student who is both math and physics major.
+(This person would eventually have 3 BS degrees!)
+\newline
+\newline
+
+%\noindent
+{\bf Answer:}~~ $\exists! C(s) \land (M(s) \land P(s))$
+%\newline
+%\newline
+
+\end{document}
+

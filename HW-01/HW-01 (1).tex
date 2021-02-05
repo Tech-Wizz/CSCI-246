@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\date{August 28}
+
+\title{CSCI 246: Assignment~1~(6 points)}
+
+\author{Kruize Christensen}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Monday, Aug 31, 8:30pm}. You will need to
+use Latex to generate a single pdf file and upload it under {\em Assignment 1}
+on D2L. There will be a penalty for not using Latex (to finish the assignment).
+This is {\bf not} a group-assignment, so you must finish the assignment by
+yourself.
+\newline
+ 
+\section*{Problem 1.}
+
+\noindent
+Let $A=\{c,d,f,g\}$, $B=\{j,f\}$ and $C=\{g,d\}$. Answer the following questions:
+\newline
+
+\noindent
+(1.1) Is $B\subseteq B$? Why?
+\newline
+\newline
+Yes, because every element in B is also in B
+\noindent
+%{\bf Answer:}~~ 
+\newline
+
+\noindent
+(1.2) Is $C\subseteq A$? Why?  
+\newline 
+\newline
+No, because C is not equal to A
+\noindent
+%{\bf Answer:}~~ ............
+\newline
+
+\noindent
+(1.3) Is $C\subset A$? Why?
+\newline
+\newline
+Yes, because every element in C is in A but C is not equal to A
+\noindent
+%{\bf Answer:}~~ ............
+\newline
+
+\newpage
+
+\noindent
+\section*{Problem 2.}
+
+Let $A=\{a,b\}$, $B=\{1,2\}$ and $C=\{2,3\}$.
+Using set-roster notation, write each of the following sets. (Enter your answers as comma-separated lists of ordered pairs.)
+\newline
+
+\noindent
+(2.1) $(B\cap C)\times A$
+\newline
+\newline
+B\cap C = {2}
+\newline
+\{2\} x A = \{(2,a),(2,b)\}
+\noindent
+\newline
+\newline
+(2.2) $(A\times B)\cap (B\times C)$
+\newline
+\newline
+A x B = \{ ( a , 1 ) , ( b , 1 ) , ( a , 2 ) , ( b , 2 )\}
+\newline
+B x C = { ( 1 , 2) , ( 2 , 2 ) , ( 1 , 3 ) , ( 2 , 3 )}
+HI
+\newline
+Then $(A\times B)\cap (B\times C ) = \{\}$ no objects belong to both $(\times B)$ and $( B \times C)$ because A contains only letters while B \& C contain only numbers
+\newline
+\newpage
+
+\section*{Problem 3.}
+
+Let the universal set be $\mathbb{R}$, the set of all real numbers, and let
+$A=\{x\in\mathbb{R}|-3\leq x\leq 0\}$, $B=\{x\in\mathbb{R}|-1<x<2\}$, 
+$C=\{x\in\mathbb{R}|7<x\leq 9\}$. Find the following:
+\newline
+
+\noindent
+(3.1) $A\cup B$
+ = \{ -3 , -2 , -1 , 0 , 1 \}
+\newline
+
+\noindent
+(3.2) $A\cap B$
+ = \{ 0 \}
+\newline
+
+\noindent
+(3.3) $A^c$
+ = \{ 1 , 8 , 9 \}
+\newline
+
+\noindent
+(3.4) $A\cap C$
+ = \{ \} no objects belong to both A \& C
+\newline
+
+\newpage
+
+\section*{Problem 4.}
+
+Let $\mathbb{Z}$ be the set of all integers and let
+$$A_0=\{n\in \mathbb{Z}| n=4k,~\mbox{for~some~integer~$k$}\}$$
+$$A_1=\{n\in \mathbb{Z}| n=4k+1,~\mbox{for~some~integer~$k$}\}$$
+$$A_2=\{n\in \mathbb{Z}| n=4k+2,~\mbox{for~some~integer~$k$}\}$$
+$$A_3=\{n\in \mathbb{Z}| n=4k+3,~\mbox{for~some~integer~$k$}\}.$$
+
+Is $\{A_0,A_1,A_2,A_3\}$ a partition of $\mathbb{Z}$? Explain your reason.
+\newline
+\newline
+Yes because each object/number can be represented as 4k , 4k + 1 , 4k + 2 or 4k + 3 which is found in each each of the A’s and represented by the quotient-remainder theorem n = dq + r and 0 \leq r < d
+
+%\noindent
+%{\bf Answer:}~~ .......................
+%\newline
+\newpage
+
+\section*{Problem 5.}
+
+Let $V_i=\{x\in\mathbb{R}|-\frac{1}{i}\leq x \leq \frac{1}{i}\}=[-\frac{1}{i},\frac{1}{i}]$ for each positive integer $i$. Find each of the following.
+\newline
+
+\noindent
+(5.1) $\bigcup\limits_{i=1}^{4}V_i$
+\newline
+\newline
+[-1,1]\cup[-\frac{1}{2},\frac{1}{2}]\cup[-\frac{1}{3},\frac{1}{3}]\cup[-\frac{1}{4},\frac{1}{4}]
+\noindent
+%{\bf Answer:}~~ .................
+\newline
+\newline
+
+\noindent
+(5.2) Are $V_1,V_2,V_3,\cdots$ mutually disjoint? Why?
+\newline
+\newline
+They are not mutually disjoint because the larger I becomes the lesser values are inside of it.
+\noindent
+%{\bf Answer:}~~ ....................
+\newline
+\newline
+
+\end{document}
+

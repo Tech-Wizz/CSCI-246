@@ -1,0 +1,259 @@
+
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\date{}
+
+\title{CSCI 246: Assignment~5~(6 points)}
+
+%\author{Your Name Here}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Thursday, Oct 22, 8:30pm}. It is strongly
+encouraged that you use Latex to generate a single pdf file and upload it
+under {\em Assignment 5} on D2L. But there will NOT be a penalty for not
+using Latex (to finish the assignment). This could be a group-assignment,
+so you could form a group with $\leq 3$ students (mathematically, this means
+you can also do it by yourself).
+\newline
+ 
+\section*{Problem 1.}
+
+\noindent
+You have two parents, four grandparents, eight great-grandparents, and so forth.
+\newline
+
+\noindent
+(1.1) If all your ancestors were distinct, what would be the total number of your ancestors for the past 41 generations (counting your parents' generation as the first generation)?
+\newline
+\newline
+%\noindent
+%{\bf Answer:}~~ 
+%\newline
+\newline
+
+\noindent
+(1.2) Assuming that each generation represents 25 years, how long (in years) is 41 generation?
+\newline
+\newline
+%\noindent
+%{\bf Answer:}~~
+%\newline
+\newline
+
+\noindent
+(1.3) The total number of people who have ever lived is approximately 10
+billion, which is $10^{10}$. Compare this fact to (1.1), what can you deduce
+about the family tree rooted at you?
+\newline
+\newline
+\newline
+
+
+\section*{Problem 2.}
+
+\noindent
+A polygon is {\em convex} means that given any two points on or inside the polygon, the segment joining the points lie entirely in the polygon.
+Use mathematical induction to prove that for every integer $n\geq 3$, the interior angles of any $n$-sided convex polygon add up to $180(n-2)$ degrees.
+\newline
+\newline
+P(n): the sum of the angles of an n-sided polygon is 180(n-2) degrees.
+\newline
+Proof for P(3)
+\newline
+Let n = 3, 180(3-2)=180 degrees
+\newline
+A polygon with 3 sides is a triangle and the sum of the angles of a triangle is 180 degrees.
+\newline
+\newline
+Proof for P(n) is true for n = k + 1
+\newline
+By induction, the sum of the angles in a k-sided polygon is 180(k-2) degrees. 
+\newline
+\newline
+180(k-2) + 180 = 180(k - 2 + 1) = 180(k - 1) = 180 ((k - 1) - 2)
+\newline
+Making it true for n = k + 1
+\newline
+\newline
+
+This proves the induction "for all integers $n \geq 3$, the sum of the angles in any n-sided convex polygon adds up to 180(n-2) degrees.
+
+
+%\noindent
+%{\bf Answer:}~~ .........
+%\newline
+\newpage
+
+\section*{Problem 3.}
+
+The given sequence is defined recursively. Using (directed) iteration to solve it, simplify your answer if possible.
+
+$t_k=t_{k-1}+3k+1$, for each integer $k\geq 1$,
+
+$t_0=0$.
+\newline
+
+
+What is $t_n$=?
+\newline
+\newline
+$t_{1} = t_{0} + 3 + 1 = 4$
+\newline
+$t_{2} = t_{1} + 6 + 1 = 11$
+\newline
+$t_{3} = t_{2} + 9 + 1 = 21$
+\newline
+$t_{4} = t_{3} + 12 + 1 = 34$
+\newline
+\newline
+Then let $t_{n} = an^2+bn+c$
+\newline
+1) $4 = a + b + c$ 
+\newline
+2)$11 = 4a + 2b +c$ 
+\newline
+3) $21 = 9a +3b +c$ 
+\newline
+Take 2-1: $3a + b = 7$
+\newline
+Take 3-1: $8a + 2b = 17$
+\newline
+$8a + 14 - 61 = 14$
+\newline
+\newline
+$2a = 3$ which means $a = \frac{3}{2}$
+\newline
+$b = \frac{5}{2}$
+\newline
+Therefore the implicit formula is $t_{k} = \frac{3}{2}k^2+\frac{5}{2}k $ for all $k \geq 0$
+
+
+
+%\noindent
+%{\bf Proof:}~~ ....
+%\newline
+
+\newpage
+
+\noindent
+\section*{Problem 4.}
+
+Let $T(n)$ be the running time (in \# of steps) of Peter's program, where $n$ is the input size $n$.
+Solve the following recurrence relation and prove your claim by induction.
+\newline
+
+$T(n)=2T(n/2)+n^2$,
+
+$T(1)=1$.
+\newline
+
+%\noindent
+%{\bf Answer:}~~
+
+$T(n) = aT(\frac{n}{b}) + nk$
+\newline
+By master method
+\newline
+Let a = 2, b = 2, and k = 2
+\newline
+$b \cdot k = 4 = a$
+\newline
+This is case 2 in the master method which is:
+\newline
+\newline
+$T(n) = \theta (n^2log2)$
+\newline
+\newline
+Proof by induction:
+\newline
+\newline
+$T(1) \leq d1$ let $d1 \geq 1$
+\newline
+$T(1) = 1$, for $n = 1$ it is true
+\newline
+\newline
+$T(m) = 2T(\frac{m}{2}) + m^2 \leq 2d1(\frac{m}{2}) \cdot 2log(\frac{m}{2}) + m^2$
+\newline
+$= m^2 \cdot logm - m^2(d1 \cdot log(2-1)) \leq m^2 \cdot log(m)$
+\newline
+If $n \leq m$ that implied that it is also true for m
+\newline
+\newline
+Therefore by $T(n) \leq d1 \cdot n^2 \cdot log(n)$ for all n
+%\newline
+%
+%\noindent
+%{\bf Proof:}~~ .................
+%\newline
+%\newline
+
+\newpage
+
+
+\section*{Problem 5.}
+
+Let $T(n)$ be the running time (in \# of steps) of Sam's program, where $n$ is the input size $n$.
+Solve the following recurrence relation and prove your claim by induction.
+\newline
+
+$T(n)=4T(n/2)+n^2$,
+
+$T(1)=1$.
+\newline
+\newline
+\newline
+$T(n) = aT(\frac{n}{b}) + nk$
+\newline
+By master method
+\newline
+Let a = 4, b = 2, and k = 2
+\newline
+$b \cdot k = 4 = a$
+\newline
+This is case 2 in the master method which is:
+\newline
+\newline
+$T(n) = \theta (n^2log2)$
+\newline
+\newline
+Proof by induction:
+\newline
+\newline
+$T(1) \leq d1$ let $d1 \geq 1$
+\newline
+$T(1) = 1$, for $n = 1$ it is true
+\newline
+\newline
+$T(m) = 4T(\frac{m}{2}) + m^2 \leq 4d1(\frac{m}{2}) \cdot 2log(\frac{m}{2}) + m^2$
+\newline
+$= m^2 \cdot logm - m^2(d1 \cdot log(2-1)) \leq m^2 \cdot log(m)$
+\newline
+If $n \leq m$ that implied that it is also true for m
+\newline
+\newline
+Therefore by $T(n) \leq d1 \cdot n^2 \cdot log(n)$ for all n
+
+
+%\noindent
+%{\bf Answer:}~~ ...........
+%\newline
+%
+%\noindent
+%{\bf Proof:}~~ .................
+%\newline
+%\newline
+
+\end{document}

@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\date{October 12th 2020}
+
+\title{CSCI 246: Assignment~4~(5 points)}
+
+\author{Kruize, Zach, Kai}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Monday, Oct 12, 8:30pm}. It is strongly
+encouraged that you use Latex to generate a single pdf file and upload it
+under {\em Assignment 4} on D2L. But there will NOT be a penalty for not
+using Latex (to finish the assignment). This could be a group-assignment,
+so you could form a group with $\leq 3$ students (mathematically, this means
+you can also do it by yourself).
+\newline
+
+\section*{Problem 1.}
+
+\noindent
+Use the test for primality to determine whether the following numbers are
+prime or not; if not, list one factor greater than one.
+
+{\bf Test for Primality:} ~~ Given an integer $n>1$, to test whether $n$ is
+prime check to see if it is divisible by a prime number less than or equal to
+$\sqrt{n}$. If it is not divisible by any of these numbers, then it is prime.
+\newline
+\newline
+Largest number is 9,127 so $\sqrt{9127} < 96$
+\newline
+All prime numbers between 1 and 96 are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89,
+\newline
+
+\noindent
+(1.1) 5,369.
+\newline
+\newline
+5369/7 = 767, therefore it is not prime
+\newline
+
+\noindent
+(1.2) 9,127.
+\newline
+\newline
+9127 is prime
+\newline
+
+\noindent
+\newline
+\newline
+(1.3) 3,927.
+\newline
+\newline
+3927/3 = 1309 therefore it is not prime.
+\newline
+
+\noindent
+(1.4) 8,647.
+\newline
+\newline
+8647 is prime
+
+
+\section*{Problem 2.}
+
+\noindent
+Compute the following, assume that $n>4$.
+$$\frac{(n-1)!}{(n-5)!} = $$ 
+
+%\noindent
+{\bf Answer:}~~ $(n-1)(n-2)(n-3)(n-4)$
+%\newline
+\newpage
+
+\section*{Problem 3.}
+
+Prove the following statement by mathematical induction.
+
+For every integer $n\geq 0$, $\sum\limits_{i=1}^{n+1}i\cdot 2^i=n\cdot 2^{n+2}+2$.
+\newline
+\newline
+P(0) =  $\sum\limits_{i=1}^{n+1}i\cdot 2^i=0\cdot 2^{0+2}+2$
+\newline
+If P(k) is true than P(k+1) is also true
+\newline
+Left hand side is $\sum\limits_{i=1}^{k+1} i\cdot  2^i$
+\newline
+Right hand side of P(k) is $k \cdot 2^{k+2} + 2$
+\newline
+\newline
+Left side of P(k+1) is then $\sum\limits_{i=1}^{k+1} i \cdot 2^i + (k+2)\cdot2^{k+2}$
+\newline
+\newline
+Right side is then $(k+1)\cdot 2^{(k+3)}+2$
+\newline
+\newline
+Then substitute right side into left side
+\newline
+\newline
+$k\cdot 2^{k+2}+2 + (k+2)\cdot 2^{k+2}$
+\newline
+\newline
+Simplifies down to
+\newline
+\newline
+$=(k+1)\cdot 2^{(k+3)}+2$
+\newline
+\newline
+Therefore P(k+1) is true which proves that P(k) is also true through induction.
+
+
+%\noindent
+%{\bf Proof:}~~ .........
+%\newline
+
+\newpage
+
+\noindent
+\section*{Problem 4.}
+
+Use the formula for the sum of a geometric sequence to write the following sum in a closed form.
+\newline
+
+$8+8^2+8^3+\cdots 8^k$, where $k\geq 1$ is an integer.
+\newline
+\newline
+$a\frac{r^k-1}{r-1} = 8 \cdot \frac{8^k-1}{8-1} = 8 \cdot \frac{8^k-1}{7} = \frac{8}{7}(8^k-1)$
+\newline
+\newline
+Closed form sum: $\frac{8}{7}(8^k-1)$
+
+%\noindent
+%{\bf Answer:}~~ ...........
+%\newline
+\newpage
+
+
+\section*{Problem 5.}
+
+Prove the following statement by mathematical induction.
+\newline
+
+For every integer $n\geq 0$, $2^n<(n+2)!$.
+\newline
+\newline
+P(n) = $2^n<(n+2)!$
+\newline
+Left hand side of P(0) = $2^0 = 1$
+\newline
+Right side is $(0+2)! = 2! = 2$
+and 1 $<$ 2 therefore P(0) is true
+\newline
+\newline
+If P(k) is true than P(k+1) is also true and vice versa
+\newline
+\newline
+Suppose P(k) is true ie. $2^k < (k+2)!$
+\newline
+If we want P(k+1) to be true, then $((k+1)+2)! = (k+3)! = (k+3)(k+2)! > (k+3)\cdot 2^k$
+\newline
+$k+3 > 2$ whenever $k\geq0$
+\newline
+Therefore $((k+1)+2)! > 2^{k+1}$
+\newline
+That means that P(k+1) is true
+\newline
+\newline
+By mathematical induction P(n) is true for all $n \geq 0$
+\newline
+Or for every integer $n \geq 0$, $n^2 < (n+2)!$
+
+
+%\noindent
+%{\bf Proof:}~~ .................
+%\newline
+%\newline
+
+\end{document}

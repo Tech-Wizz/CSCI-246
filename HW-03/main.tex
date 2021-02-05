@@ -1,0 +1,209 @@
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\begin{document}
+\date{October 1st, 2020}
+
+\title{CSCI 246: Assignment~3~(6 points)}
+
+\author{Zach Wadhams, Kruize Christensen, Kai Dockens}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Thursday, Oct 1, 8:30pm}. It is strongly
+encouraged that you use Latex to generate a single pdf file and upload it
+under {\em Assignment 3} on D2L. But there will NOT be a penalty for not
+using Latex (to finish the assignment). This could be a group-assignment,
+so you could form a group with $\leq 3$ students (mathematically, this means
+you can also do it by yourself).
+\newline
+ 
+\section*{Problem 1.}
+
+\noindent
+Prove that if $a$ and $b$ are odd integers, then $a^2+b^2$ is even.
+\newline
+\newline
+Let $a = 2x+1$ and $b = 2y+1$ where x and y are any two integers
+\newline
+\newline
+$a^2 + b^2 = (2x+1)^2 + (2y+1)^2$
+\newline
+\newline
+$= 4x^2 + 4x + 1 + 4y^2 + 4y + 1$
+\newline
+\newline
+$= 4(x^2 + y^2 + x + y) + 2$
+\newline
+\newline
+$= 2 (2(x^2 + y^2 + x + y) + 1)$
+\newline
+\newline
+Because $2(x^2 + y^2 + x + y)$ is an integer, let it be $m$ 
+\newline
+\newline
+$a^2 + b^2 = 2m$ where m is an integer. Therefore $(a^2 + b^2)$ must be an even integer
+%\noindent
+%\noindent
+%{\bf Answer:}~~ .......................
+%\newline
+%\newline
+%\newline
+%\newline
+\newpage
+
+
+\section*{Problem 2.}
+
+\noindent
+Reorder the premises in the argument to show that the conclusion follows as
+a valid consequence from the premises. It might be helpful to rewrite the
+statements in if-then form and replace some of them by their contrapositives.
+{\em You can assume the premise: ``The arguments in these examples are not arranged in regular order like the ones I am used to".}
+\newline
+
+{\bf A}. When I work a logic example without grumbling, you may be sure it is one I understand.
+\newline
+\newline
+1) If I can’t understand a logic example, I grumble
+\newline
+\newline
+{\bf B}. No easy examples make my head ache.
+\newline
+\newline
+2) If I get a headache then the example is not easy
+\newline
+\newline
+{\bf C}. I can't understand examples if the arguments are not arranged in regular order like the ones I am used to.
+\newline
+\newline
+3) If an argument belongs to these examples, then the arguments are not arranged in regular order like the ones I am used to
+\newline
+\newline
+4)  If the arguments are not arranged in regular order like the ones I am used to, then I can’t understand
+\newline
+\newline
+{\bf D}. I never grumble at an example unless it gives me a headache
+\newline
+\newline
+5) If I grumble at an example, then it gives me a headache.
+\newline
+\newline
+\newline
+\newline
+The correct order is then 3,4,1,5,2
+\newline
+\newline
+$\therefore$~~~ These examples are not easy.
+\newline
+\newline
+
+
+%\noindent
+%{\bf Answer:}~~ .........
+%\newline
+\newpage
+
+\section*{Problem 3.}
+
+Sam worked hard last night; in fact, he slept for only three hours. He claimed that he found the following theorem:
+
+For every integer $n>3$, if $n$ is even then $n^2+1$ is prime.
+\newline
+
+\noindent
+Find a counterexample for Sam's claim.
+\newline
+\newline
+Let n = 8
+\newline
+{\bf Answer:}~~ $8^2 = 64 + 1 = 65$ which is not a prime number. This means Sam's claim in false.
+
+%\noindent
+%{\bf Answer:}~~ .........
+%\newline
+
+\newpage
+
+\noindent
+\section*{Problem 4.}
+
+Prove the following statement directly by definition.
+\newline
+
+The difference of any two rational numbers is a rational number.
+\newline
+\newline
+Let x and y be two rational numbers. By definition of rationals, x = a/b and, 
+\newline
+y = c/d for some integers a, b, c \& d with, b $\neq 0$ and d $\neq 0$.
+\newline
+\newline
+x - y = (ad - bc)/bd
+\newline
+\newline
+Numerator and Denominator are integers because products and differences of integers are always integers and bd $\neq 0$ by the zero product property.
+\newline
+\newline
+Therefore x - y is a rational number because it is the quotient of two integers with a non zero denominator.
+
+%\noindent
+%{\bf Answer:}~~ ...........
+%\newline
+\newpage
+
+
+\section*{Problem 5.}
+
+If $n$ is an integer and $n>1$, then $n!$ is the product of $n$ and every other positive integer that is less than $n$, e.g., $5!=5\times 4\times 3\times 2\times 1$.
+\newline
+
+\noindent
+(5.1) Write 6! in standard factored form.
+\newline
+\newline
+6! = $2^4 * 3^2 * 5$
+\newline
+
+%\noindent
+%{\bf Answer:}~~ .................
+%\newline
+%\newline
+
+\noindent
+(5.2) Write 20! in standard factored form.
+\newline
+\newline
+20! = $2^{18} * 3^8 * 5^4 * 7^2 * 11 * 13 * 17 * 19$
+\newline
+
+%\noindent
+%{\bf Answer:}~~ ....................
+%\newline
+%\newline
+
+\noindent
+(5.3) Without computing the value of $(20!)^2$, determine how many zeros are at the end of the number when it is written in decimal form. Explain the reason.
+\newline
+\newline
+Write $(20!)^2$ in factored form $10^{8} * (2^{28} * 3^{16} * 7^4 * 11^2 * 13^2 * 17^2 * 19^2)$
+\newline
+\newline
+10 does not divide into $2^{28} * 3^{16} * 7^4 * 11^2 * 13^2 * 17^2 * 19^2$ and that means that the numbers of zeroes at the end is 8
+
+%\noindent
+%{\bf Answer:}~~ ....................
+%\newline
+%\newline
+
+\end{document}

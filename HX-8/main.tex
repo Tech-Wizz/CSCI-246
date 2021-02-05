@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+
+\begin{document}
+\date{}
+
+\title{CSCI 246: Assignment~8~(6 points)}
+
+%\author{Your Name Here}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Thursday, Nov 12, 9:30pm}. It is strongly
+encouraged that you use Latex to generate a single pdf file and upload it
+under {\em Assignment 8} on D2L. But there will NOT be a penalty for not
+using Latex (to finish the assignment). This could be a group-assignment,
+so you could form a group with $\leq 3$ students (mathematically, this means
+you can also do it by yourself).
+\newline
+ 
+\section*{Problem 1.}
+
+\noindent
+A company offers a raffle whose grand prize is a \$60,000 new car. Additional prizes are a \$1,000 television and a \$500 computer. Tickets cost \$20 each. Ticket income will be donated to a charity. If 3,000 tickets are sold, what is the expected gain or loss (in dollars) of each ticket? (Round your answer to the nearest cent.)
+\newline
+\newline
+There are three prizes. The probability of winning each of them is 1/3000.
+\newline
+$= 3500(\frac{1}{3000}) + 900(\frac{1}{3000}) + 600(\frac{1}{3000})$
+\newline
+$= 12.2$ 
+\newline
+12.2 - 20 = -7.80 loss expected
+\newline
+
+
+\newpage
+
+\section*{Problem 2.}
+
+\noindent
+One urn contains {\color{red}9} blue balls and {\color{red}12} white balls, and a second urn contains {\color{red}12} blue balls and {\color{red}8} white balls. An urn is selected at random, and a ball is then randomly chosen from the
+urn. (Round your answers to one decimal place.)
+\newline
+
+\noindent
+(2.1) What is the probability (as a \%) that the chosen ball is blue?
+\newline
+\newline
+\newline
+$\frac{1}{2} * \frac{9}{21} + \frac{1}{2 * \frac{19}{20}} = 0.5143$
+\newline
+= 51.43 percent that ball is blue
+\newline
+\newline
+\newline
+\newline
+
+\noindent
+(2.2) If the chosen ball is blue, what is the probability (as a \%) that it
+came from the first urn?
+\newline
+\newline
+\newline
+$\frac{\frac{1}{2} * \frac{9}{21}}{\frac{1}{2} * \frac{9}{21} + \frac{1}{2} * \frac{12}{20}}$
+\newline
+\newline
+$= \frac{\frac{9}{21}}{\frac{9}{21} + \frac{12}{20}} + \frac{\frac{9}{21}}{180+252}$
+\newline
+\newline
+$= 0.4167 * 100$
+\newline
+\newline
+= 41.67 percent that the blue ball came from the first urn.
+\newpage
+
+
+\section*{Problem 3.}
+
+\noindent
+Prove that at a party with at least two people, there are at least two mutual
+acquaintances or at least two mutual strangers.
+\newline
+\newline
+Let there be N people in a group. A person can only have N-1 friends. Look at the contrary that all N people have a different number of friends. Sequence: 0,1,2,3,....,N-1, There also must be a person with exactly N-1 friends.
+\newline
+\newline
+There must be at least one with N-1 friends. But if that is true, then all others have this person as a friend which implies that there is no one with no friends. Therefore, the only possible number comes from 1,2,3,...,N-1.
+\newline
+\newline
+There are at least two people with the same number of friends, so it must be true. 
+\newline
+\newline
+Therefore in a party with at least two people, there are at least two mutual acquaintances or at least two mutual strangers.
+\newpage
+
+\section*{Problem 4.}
+
+List the adjacency matrices for the following two graphs.
+\newline
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.70]{fig1.pdf}
+\end{center}
+\label{fig1}
+\caption{\bf Two graphs $G_1$ and $G_2$.}
+\end{figure}
+%
+%\noindent
+%{\bf Answer:}~~.
+%\newline
+\newpage
+
+\section*{Problem 5.}
+
+Consider the following description of a graph:
+\newline
+
+  Graph, circuit-free, seven vertices, four edges.
+\newline
+
+\noindent
+Can such a graph exist? If so, draw an example. If not, explain the reason.
+\newline
+\newline
+\newline
+\newline
+%\noindent
+{\bf Answer:}Yes
+%\newline
+%\newline
+
+\end{document}

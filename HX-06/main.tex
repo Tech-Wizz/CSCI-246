@@ -1,0 +1,225 @@
+\documentclass[11pt]{article}
+
+%Don't change any thing before \begin{document}
+%They are not useful for now, but later when you try to add figures
+%these might be useful. In fact if you use sth fancy, you might need
+%to add more packages, or macros.
+\usepackage{amssymb,amsmath}
+\usepackage{times,psfrag,epsf,epsfig,graphics,graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+
+\begin{document}
+\date{}
+
+\title{CSCI 246: Assignment~7~(6 points)}
+
+%\author{Your Name Here}
+
+\maketitle
+
+
+\noindent
+This assignment is due on {\bf Friday, Nov 06, 9:30pm}. It is strongly
+encouraged that you use Latex to generate a single pdf file and upload it
+under {\em Assignment 7} on D2L. But there will NOT be a penalty for not
+using Latex (to finish the assignment). This could be a group-assignment,
+so you could form a group with $\leq 3$ students (mathematically, this means
+you can also do it by yourself).
+\newline
+ 
+\section*{Problem 1.}
+
+\noindent
+(1.1) How many odd integers are there from 1,000 to 9,999?
+\newline
+\newline
+4500 odd integers
+\newline
+\newline
+\noindent
+(1.2) How many integers from 1,000 to 9,999 have distinct digits?
+\newline
+\newline
+$9 * 9 * 8 * 7 = 4536$ possible integers with distinct digits
+\newline
+\newline
+
+
+\noindent
+(1.3) How many odd integers from 1,000 to 9,999 have distinct digits?
+\newline
+\newline
+$5 * 8 * 8 * 7 = 2240$ possible odd integers with distinct digits
+\newline
+\newline
+
+
+\noindent
+(1.4) What is the probability that a randomly chosen four-digit integer has distinct digits?
+\newline
+\newline
+Distinct Digits - $\frac{4536}{9000} = 50.4 $ percent
+\newline
+
+
+\noindent
+(1.5) What is the probability that a randomly chosen four-digit integer has distinct digits and is odd?
+\newline
+Distinct digits and odd - $\frac{2240}{9000} = 24.89$ percent
+\newpage
+
+\section*{Problem 2.}
+
+\noindent
+At company $C$, passwords must be from 4-6 symbols long and composed from the
+26 uppercase letters of the Roman alphabet, the ten digits 0-9, and the 14
+special symbols !, @, \#, \$, \%, $^{\wedge}$, \&, *, (, ), -, +, \{, and \}.
+\newline
+
+\noindent
+(2.1) How many passwords are possible if repetition of symbols is allowed?
+\newline
+\newline
+\newline
+$50^4 + 50^5 + 50^6 = 15943750000$ possible passwords
+\newline
+\newline
+\newline
+\newline
+
+\noindent
+(2.2) How many passwords contain no repeated symbols?
+\newline
+\newline
+\newline
+$\frac{50!}{46!} + \frac{50!}{45!} + \frac{50!}{44!} = 11701082400$ possible passwords
+\newline
+\newline
+\newline
+\newline
+
+\noindent
+(2.3) How many passwords have at least one repeated symbols?
+\newline
+\newline
+\newline
+$15943750000 - 11701082400 = 4242667600$ possible passwords
+\newline
+\newline
+\newline
+\newline
+\newpage
+
+
+\section*{Problem 3.}
+
+\noindent
+(3.1) How many integers from 1 through 1000 are multiples of 2 or multiples of 9?
+\newline
+\newline
+\newline
+$1000 = 2 * 500$ (multiples of 2)
+\newline
+$999 = 9 * 111$ (multiples of 9)
+\newline
+$990 = 18 * 55$ (multiples of 18)
+\newline
+$= 500 + 111 - 55 = 556$ integers
+\newline
+\newline
+\newline
+
+
+\noindent
+(3.2) Suppose an integer from 1 through 1000 is chosen at random. Use the result of part (3.1) to find the probability that the integer is a multiple of 2 or a multiple of 9. (Enter your probability as a percent.)
+\newline
+\newline
+\newline
+$\frac{556}{1000} = 55.6$ percent
+\newline
+\newline
+\newline
+
+\noindent
+(3.3) How many integers from 1 through 1000 are neither multiples of 2 nor multiples of 9?
+\newline
+\newline
+$1000 - 556 = 444$ integers
+\newline
+\newpage
+
+\section*{Problem 4.}
+
+A programmer Sam writes 500 lines of (correct) computer code in 17 days. His
+boss claims that among one of the 17 days Sam must have written at least 30
+lines of codes. Explain why his boss can claim that.
+\newline
+\newline
+There are 500 lines of code and 17 days to code it. $\frac{500}{17} = 29.42$
+\newline
+Which means that Sam has written 29 lines each day.
+\newline
+$29 * 17 = 493$ lines of code which is missing 7 lines.
+\newline
+\newline
+Therefore if he writes 1 extra line of code on 7 of the 17 days, he will complete all 500 lines. 
+\newline
+\newline
+He could also write all 7 extra lines of code on one day which makes the number of lines he wrote on one day be 36 lines. 
+\newline
+\newline
+This proves that the only way he could write 500 lines in 17 days is by having at least one day where he wrote 30 or more lines of code.
+\newpage
+
+\section*{Problem 5.}
+
+\noindent
+(5.1) How many {\color{red}17}-bit strings contain exactly {\color{red}eight} 1's?
+\newline
+\newline
+$\frac{17!}{8!(17-8)} = \frac{145860}{6} = 24310$ 17-bit strings.
+\newline
+\newline
+\newline
+
+
+\noindent
+(5.2) How many {\color{red}17}-bit strings contain at least {\color{red}fourteen} 1's?
+\newline
+\newline
+$\frac{17!}{14!(3!)} = \frac{4080}{6} = 680$ 
+\newline
+$\frac{17!}{15! * 2!} = 136$
+\newline
+$\frac{17!}{16! * 1!} = 17$
+\newline
+$680 + 136 + 17 + 1 = 834$ 17-bit strings.
+\newline
+
+
+\noindent
+(5.3) How many {\color{red}17}-bit strings contain at least {\color{red}one} 1?
+\newline
+\newline
+$2^{17} = 131072$
+\newline
+Must subtract one because one of the outcomes has no ones.
+\newline
+$131072 - 1 = 131071$ 17-bit strings.
+\newline
+
+\noindent
+(5.4) How many {\color{red}17}-bit strings contain at most {\color{red}one} 1?
+\newline
+\newline
+Number of ways to select 0 ones: 1
+\newline
+Number of ways to select 1 one: 17
+\newline
+$1 + 17 = 18$ 17-bit strings.
+\newline
+\newline
+
+\end{document}
